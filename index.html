@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<!-- saved from url=(0139)#cambridge -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音楽を巡る異文化の旅 - HUA ZIYI</title>
+    <meta name="description" content="HUA ZIYIの音楽学ポートフォリオ。中国・イギリス・日本での学びを通して、演奏経験、音楽学研究、異文化理解をまとめたウェブサイトです。">
+    <meta name="theme-color" content="#2e4a2a">
+    <meta property="og:title" content="音楽を巡る異文化の旅 - HUA ZIYI">
+    <meta property="og:description" content="演奏経験と異文化視座からの学びと探究。武漢、イギリス、日本へと続く音楽学研究の軌跡。">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Noto+Sans+JP:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green: #2e4a2a;
+            --green-deep: #243a21;
+            --green-lite: #3a5a36;
+            --pink: #e89cb1;
+            --pink-deep: #d27e96;
+            --cream: #efe7d4;
+            --cream-2: #e6dcc4;
+            --ink: #1a1a17;
+            
+            --font-serif: 'Source Serif 4', 'Noto Serif JP', 'Source Serif Pro', Georgia, serif;
+            --font-mono: 'JetBrains Mono', 'Noto Sans JP', ui-monospace, Menlo, monospace;
+        }
+
+        html, body { margin: 0; padding: 0; height: 100%; overflow-x: hidden; }
+        html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+        body { background: #1a1a17; } /* dark stage */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-style: normal !important; }
+        i, em, cite, address, dfn, var { font-style: normal; }
+        strong, b { font-weight: 600; }
+
+        .slide {
+            width: 100vw; height: 100vh; height: 100dvh;
+            scroll-snap-align: start;
+            position: relative; display: flex;
+            align-items: center; justify-content: center;
+        }
+        
+        .slide-inner {
+            width: 1920px; height: 1080px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            position: relative;
+            transform-origin: center center;
+            display: flex; flex-direction: column;
+            padding: 96px 120px;
+        }
+
+        .slide-content {
+            flex: 1; display: flex; flex-direction: column;
+            justify-content: center; position: relative;
+        }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .slide.visible .reveal { opacity: 1; transform: translateY(0); }
+        body.site-mode .slide.visible .reveal { opacity: 0; transform: translateY(30px); }
+        body.site-mode .reveal.in-view { opacity: 1; transform: translateY(0); }
+        body.site-mode .slide.visible .reveal.in-view { opacity: 1; transform: translateY(0); }
+        .reveal:nth-child(1) { transition-delay: 0.1s; }
+        .reveal:nth-child(2) { transition-delay: 0.2s; }
+        .reveal:nth-child(3) { transition-delay: 0.3s; }
+        .reveal:nth-child(4) { transition-delay: 0.4s; }
+
+        /* Typography */
+        .display-hero { font-family: var(--font-serif); font-size: 140px; font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; }
+        .display { font-family: var(--font-serif); font-size: 120px; font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; }
+        .headline-xl { font-family: var(--font-serif); font-size: 96px; font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; }
+        .headline { font-family: var(--font-serif); font-size: 84px; font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; }
+        .title-card-lg { font-family: var(--font-serif); font-size: 80px; font-weight: 500; line-height: 1.05; letter-spacing: -0.01em; }
+        .title-card { font-family: var(--font-serif); font-size: 60px; font-weight: 500; line-height: 1.05; letter-spacing: -0.01em; }
+        .title-card-sm { font-family: var(--font-serif); font-size: 48px; font-weight: 500; line-height: 1.05; letter-spacing: -0.01em; }
+        .name { font-family: var(--font-serif); font-size: 44px; font-weight: 600; line-height: 1.0; }
+        .meta-value { font-family: var(--font-serif); font-size: 32px; font-weight: 500; }
+        .body-lg { font-family: var(--font-serif); font-size: 32px; font-weight: 400; line-height: 1.6; }
+        .body { font-family: var(--font-serif); font-size: 30px; font-weight: 400; line-height: 1.6; }
+        .body-card { font-family: var(--font-serif); font-size: 26px; font-weight: 400; line-height: 1.6; }
+
+        .label { font-family: var(--font-mono); font-size: 26px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+        .label-tight { font-family: var(--font-mono); font-size: 26px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+        .caption-mono { font-family: var(--font-mono); font-size: 24px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; }
+
+        /* Components */
+        .topbar {
+            display: flex; justify-content: space-between; align-items: baseline;
+            margin-bottom: 60px;
+        }
+        .footline {
+            position: absolute; bottom: 80px; left: 120px; right: 120px;
+            display: flex; justify-content: space-between;
+        }
+        .topic-tile {
+            border-radius: 6px; padding: 40px 40px 36px;
+            display: flex; flex-direction: column; gap: 20px;
+        }
+        .step-tile {
+            border-radius: 8px; padding: 40px 32px 32px; min-height: 470px;
+            border: 2.5px solid;
+            display: flex; flex-direction: column; gap: 20px;
+        }
+        .monogram-circle {
+            width: 130px; height: 130px; border-radius: 50%;
+            border: 2px solid var(--pink); color: var(--pink);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-mono); font-size: 28px; letter-spacing: 0.1em; font-weight: 500;
+            flex-shrink: 0;
+        }
+        
+        /* Layouts */
+        .col-2 { display: flex; gap: 80px; align-items: center; flex: 1; }
+        .col-text { flex: 1; }
+        .col-img { flex: 1; text-align: center; }
+        .col-img img { max-height: 600px; border-radius: 4px; object-fit: contain; max-width: 100%; }
+        
+        .side-by-side-img { display: flex; gap: 40px; justify-content: center; margin-top: 40px; margin-bottom: 40px; }
+        .side-by-side-img img { height: 450px; object-fit: cover; border-radius: 4px; max-width: 100%; }
+
+        .meta-dl {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px;
+            border-top: 2px solid var(--green); padding-top: 40px; margin-top: 60px;
+        }
+        .meta-dl dt { margin-bottom: 16px; }
+
+        /* Region Colors */
+        .bg-cream { background: var(--cream); color: var(--ink); }
+        .bg-cream .headline, .bg-cream .headline-xl { color: var(--green); }
+        .bg-cream .label, .bg-cream .label-tight, .bg-cream .caption-mono, .bg-cream .footline { color: var(--green); }
+        .bg-cream .meta-dl { border-color: var(--green); }
+        .bg-cream .meta-dl dt { color: var(--green); }
+
+        .bg-green { background: var(--green); color: var(--cream); }
+        .bg-green .headline, .bg-green .headline-xl { color: var(--cream); }
+        .bg-green .label, .bg-green .label-tight, .bg-green .caption-mono, .bg-green .footline { color: var(--pink); }
+        .bg-green .meta-dl { border-color: var(--pink); }
+        .bg-green .meta-dl dt { color: var(--pink); }
+
+        .bg-pink { background: var(--pink); color: var(--green-deep); }
+        .bg-pink .headline, .bg-pink .headline-xl { color: var(--green-deep); }
+        .bg-pink .label, .bg-pink .label-tight, .bg-pink .caption-mono, .bg-pink .footline { color: var(--green-deep); }
+        .bg-pink .meta-dl { border-color: var(--green-deep); }
+        .bg-pink .meta-dl dt { color: var(--green-deep); }
+
+        /* Tile Colors */
+        .tile-green { background: var(--green); color: var(--pink); border-color: var(--green); }
+        .tile-green .title-card, .tile-green .title-card-sm, .tile-green .title-card-lg { color: var(--pink); }
+
+        .tile-pink { background: var(--pink); color: var(--green-deep); border-color: var(--pink); }
+        .tile-pink .title-card, .tile-pink .title-card-sm, .tile-pink .title-card-lg { color: var(--green-deep); }
+
+        .tile-green-lite { background: var(--green-lite); color: var(--pink); border-color: var(--green-lite); }
+        .tile-green-lite .title-card, .tile-green-lite .title-card-sm, .tile-green-lite .title-card-lg { color: var(--pink); }
+
+        .tile-cream-2 { background: var(--cream-2); border: 2px solid var(--green); color: var(--green); }
+        .tile-cream-2 .title-card, .tile-cream-2 .title-card-sm, .tile-cream-2 .title-card-lg { color: var(--green); }
+        .tile-cream-2 .body-card { color: var(--ink); }
+
+        .nav-dots {
+            position: fixed; right: 24px; top: 50%; transform: translateY(-50%);
+            display: flex; flex-direction: column; gap: 10px; z-index: 100;
+        }
+        .dot {
+            width: 10px; height: 10px; border-radius: 50%;
+            background: rgba(128,128,128,0.3); cursor: pointer; transition: all 0.3s;
+        }
+        .dot.active { background: #e89cb1; transform: scale(1.3); }
+
+        .keyboard-hint {
+            position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+            font-size: 13px; color: rgba(128,128,128,0.5); z-index: 100;
+            transition: opacity 0.5s; pointer-events: none;
+            font-family: var(--font-mono);
+        }
+
+        html.is-mobile,
+        html.is-mobile body { height: auto; overflow-x: hidden; }
+        html.is-mobile { scroll-snap-type: none; }
+        html.is-mobile .slide {
+            width: 100vw;
+            scroll-snap-align: none;
+            display: block; overflow: hidden;
+            position: relative; margin: 0 0 16px 0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+        }
+        html.is-mobile .slide:last-child { margin-bottom: 0; }
+        html.is-mobile .slide-inner {
+            transform-origin: top left;
+            position: absolute; top: 0; left: 0;
+        }
+        html.is-mobile .nav-dots,
+        html.is-mobile .keyboard-hint { display: none; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; }
+            html { scroll-behavior: auto; }
+        }
+
+        /* Website edition: keep the editorial look, but make it read like a scrolling site. */
+        html, body { height: auto; overflow-x: hidden; }
+        html { scroll-snap-type: none; }
+        body {
+            background: var(--cream-2);
+            padding: 28px 0 56px;
+        }
+        .nav-dots,
+        .keyboard-hint { display: none !important; }
+        .slide {
+            width: min(1280px, calc(100vw - 48px));
+            height: auto;
+            min-height: 0;
+            display: block;
+            margin: 0 auto 28px;
+            scroll-snap-align: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 18px 50px rgba(26, 26, 23, 0.18);
+        }
+        .slide-inner {
+            width: 100%;
+            height: auto;
+            min-height: 680px;
+            transform: none !important;
+            padding: 72px 84px;
+        }
+        .slide-content { min-height: 0; }
+        .footline {
+            position: static;
+            margin-top: 56px;
+            padding-top: 18px;
+            border-top: 2px solid currentColor;
+        }
+        .topbar { margin-bottom: 44px; }
+        .display-hero { font-size: clamp(64px, 7vw, 112px); line-height: 1.06; }
+        .display { font-size: clamp(56px, 6vw, 92px); }
+        .headline-xl { font-size: clamp(48px, 5.4vw, 78px); }
+        .headline { font-size: clamp(42px, 4.8vw, 68px); }
+        .title-card-lg { font-size: clamp(42px, 4.4vw, 64px); }
+        .title-card { font-size: clamp(36px, 4vw, 54px); }
+        .title-card-sm { font-size: clamp(30px, 3.4vw, 42px); }
+        .body-lg { font-size: clamp(24px, 2.4vw, 32px); }
+        .body { font-size: clamp(20px, 2vw, 27px); }
+        .body-card { font-size: clamp(18px, 1.8vw, 24px); }
+        .student-meta {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+            width: min(760px, 100%);
+            margin: 56px auto 0;
+            border-top: 2px solid var(--pink);
+            padding-top: 24px;
+            text-align: left;
+        }
+        .student-meta dt {
+            font-family: var(--font-mono);
+            color: var(--pink);
+            font-size: 18px;
+            letter-spacing: .14em;
+            margin-bottom: 8px;
+        }
+        .student-meta dd {
+            margin: 0;
+            color: var(--cream);
+            font-family: var(--font-serif);
+            font-size: 34px;
+            line-height: 1.1;
+            font-weight: 500;
+        }
+        .hero-title-block {
+            width: min(980px, 100%);
+            margin: 0 auto;
+            text-align: left;
+        }
+        .hero-kicker {
+            display: inline-block;
+            margin-bottom: 28px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--pink);
+            color: var(--pink);
+            font-family: var(--font-mono);
+            font-size: 18px;
+            letter-spacing: .14em;
+        }
+        .hero-title-block .display-hero {
+            max-width: 960px;
+        }
+        .hero-title-line {
+            display: block;
+        }
+        .hero-title-line.indent {
+            padding-left: clamp(48px, 7vw, 112px);
+        }
+        .hero-lead {
+            max-width: 820px;
+            margin-top: 42px;
+            color: var(--cream);
+        }
+        .col-2 { gap: 54px; align-items: center; }
+        .side-by-side-img img { height: 360px; }
+        .col-img img { max-height: 500px; }
+        @media (max-width: 820px) {
+            body { padding: 12px 0 28px; }
+            .slide { width: min(100vw - 20px, 1280px); margin-bottom: 14px; }
+            .slide-inner { min-height: 0; padding: 44px 24px; }
+            .col-2,
+            .side-by-side-img,
+            .meta-dl,
+            .student-meta {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .side-by-side-img img,
+            .col-img img {
+                width: 100%;
+                height: auto;
+                max-height: none;
+            }
+            .footline { gap: 16px; flex-wrap: wrap; }
+            .hero-title-block { text-align: left; }
+            .hero-title-line.indent { padding-left: 0; }
+        }
+
+        /* Continuous website layout override */
+        body.site-mode {
+            background: var(--cream);
+            padding: 0;
+        }
+        body.site-mode .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            padding: 20px max(28px, calc((100vw - 1180px) / 2));
+            background: rgba(239, 231, 212, .92);
+            backdrop-filter: blur(16px);
+            border-bottom: 2px solid var(--green);
+            color: var(--green);
+            font-family: var(--font-mono);
+            font-size: 21px;
+            letter-spacing: .08em;
+            font-weight: 700;
+        }
+        body.site-mode .site-nav-brand {
+            white-space: nowrap;
+        }
+        body.site-mode .site-nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        body.site-mode .site-nav a {
+            text-decoration: none;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            color: inherit;
+        }
+        body.site-mode .site-nav a:hover {
+            border-bottom-color: var(--green);
+        }
+        body.site-mode .slide {
+            width: 100%;
+            height: auto !important;
+            min-height: 0;
+            margin: 0;
+            border-radius: 0;
+            box-shadow: none;
+            overflow: visible;
+            display: block;
+        }
+        body.site-mode .slide:has(.bg-green) { background: var(--green); color: var(--cream); }
+        body.site-mode .slide:has(.bg-pink) { background: var(--pink); color: var(--green-deep); }
+        body.site-mode .slide:has(.bg-cream) { background: var(--cream); color: var(--ink); }
+        body.site-mode .slide:nth-of-type(even):has(.bg-cream) { background: var(--cream-2); }
+        body.site-mode .slide-inner {
+            width: min(1180px, calc(100% - 56px));
+            height: auto !important;
+            min-height: auto;
+            margin: 0 auto;
+            padding: 76px 0 !important;
+            transform: none !important;
+            background: transparent !important;
+            position: relative;
+        }
+        body.site-mode .slide-inner::before,
+        body.site-mode .slide-inner::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+        }
+        body.site-mode .slide-inner > * {
+            position: relative;
+            z-index: 1;
+        }
+        body.site-mode .slide-inner::before {
+            right: 0;
+            top: 88px;
+            width: 132px;
+            height: 132px;
+            border: 2px solid currentColor;
+            border-radius: 50%;
+            opacity: .16;
+        }
+        body.site-mode .slide-inner::after {
+            left: 0;
+            bottom: 74px;
+            width: 260px;
+            height: 58px;
+            opacity: .18;
+            background:
+                linear-gradient(currentColor, currentColor) 0 0 / 100% 2px no-repeat,
+                linear-gradient(currentColor, currentColor) 0 14px / 100% 2px no-repeat,
+                linear-gradient(currentColor, currentColor) 0 28px / 100% 2px no-repeat,
+                linear-gradient(currentColor, currentColor) 0 42px / 100% 2px no-repeat,
+                linear-gradient(currentColor, currentColor) 0 56px / 100% 2px no-repeat;
+        }
+        body.site-mode .deco-stickers {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        body.site-mode .sticker {
+            position: absolute;
+            display: grid;
+            place-items: center;
+            border: 2px solid currentColor;
+            border-radius: 8px;
+            font-family: var(--font-mono);
+            font-size: 16px;
+            letter-spacing: .08em;
+            opacity: .24;
+            transform: rotate(-6deg);
+        }
+        body.site-mode .sticker.round {
+            border-radius: 50%;
+            width: 86px;
+            height: 86px;
+        }
+        body.site-mode .sticker.note {
+            border: none;
+            font-family: var(--font-serif);
+            font-size: 74px;
+            opacity: .18;
+        }
+        body.site-mode .sticker.tag {
+            padding: 10px 14px;
+            background: rgba(255,255,255,.12);
+        }
+        body.site-mode .sticker.s1 { right: 38px; top: 228px; }
+        body.site-mode .sticker.s2 { left: 34px; top: 50%; transform: rotate(5deg); }
+        body.site-mode .sticker.s3 { right: 18%; bottom: 82px; transform: rotate(4deg); }
+        body.site-mode .sticker.s4 { left: 18%; bottom: 128px; transform: rotate(-10deg); }
+        body.site-mode .bg-cream .sticker,
+        body.site-mode .bg-cream.slide-inner::before,
+        body.site-mode .bg-cream.slide-inner::after {
+            color: var(--green);
+        }
+        body.site-mode .bg-green .sticker,
+        body.site-mode .bg-green.slide-inner::before,
+        body.site-mode .bg-green.slide-inner::after {
+            color: var(--pink);
+        }
+        body.site-mode .bg-pink .sticker,
+        body.site-mode .bg-pink.slide-inner::before,
+        body.site-mode .bg-pink.slide-inner::after {
+            color: var(--green-deep);
+        }
+        body.site-mode .slide:first-of-type .slide-inner {
+            min-height: calc(100vh - 54px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        body.site-mode .topbar {
+            margin-bottom: 34px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid currentColor;
+        }
+        body.site-mode .footline {
+            display: none;
+        }
+        body.site-mode .slide-content {
+            min-height: 0;
+        }
+        body.site-mode .display-hero {
+            font-size: clamp(58px, 9vw, 128px);
+        }
+        body.site-mode .col-2 {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(380px, .95fr);
+            gap: 56px;
+            align-items: stretch;
+        }
+        body.site-mode .col-img img,
+        body.site-mode .side-by-side-img img {
+            border-radius: 8px;
+        }
+        body.site-mode .col-img img {
+            width: 100%;
+            max-height: 560px;
+            object-fit: cover;
+        }
+        body.site-mode .col-img {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            height: 100%;
+        }
+        body.site-mode .image-note {
+            border: 2px solid currentColor;
+            border-radius: 8px;
+            padding: 20px 22px;
+            text-align: left;
+            background: rgba(255,255,255,.16);
+            flex: 0 0 auto;
+        }
+        body.site-mode .bg-cream .image-note {
+            background: var(--cream-2);
+            color: var(--green);
+        }
+        body.site-mode .image-note h3 {
+            margin: 0 0 14px;
+            font-family: var(--font-serif);
+            font-size: clamp(24px, 2.4vw, 34px);
+            font-weight: 500;
+            line-height: 1.1;
+        }
+        body.site-mode .image-note dl {
+            display: grid;
+            gap: 0;
+            margin: 0;
+        }
+        body.site-mode .image-note div {
+            display: grid;
+            grid-template-columns: 68px 1fr;
+            gap: 12px;
+            align-items: baseline;
+            padding: 10px 0;
+            border-top: 2px solid currentColor;
+        }
+        body.site-mode .image-note div:last-child {
+            padding-bottom: 0;
+        }
+        body.site-mode .image-note dt {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            letter-spacing: .08em;
+        }
+        body.site-mode .image-note dd {
+            margin: 0;
+            font-size: clamp(16px, 1.35vw, 20px);
+            line-height: 1.38;
+        }
+        body.site-mode .side-by-side-img {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+        body.site-mode .topic-tile,
+        body.site-mode .step-tile {
+            min-height: 0;
+        }
+        body.site-mode .meta-dl {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        body.site-mode .detail-panel {
+            margin-top: 34px;
+            padding: 28px 32px;
+            border: 2px solid currentColor;
+            border-radius: 8px;
+            background: rgba(255,255,255,.16);
+            font-family: var(--font-serif);
+        }
+        body.site-mode .bg-cream .detail-panel {
+            background: var(--cream-2);
+            color: var(--ink);
+            border-color: var(--green);
+        }
+        body.site-mode .bg-pink .detail-panel {
+            background: rgba(239,231,212,.32);
+            color: var(--green-deep);
+            border-color: var(--green-deep);
+        }
+        body.site-mode .bg-green .detail-panel {
+            background: rgba(232,156,177,.12);
+            color: var(--cream);
+            border-color: var(--pink);
+        }
+        body.site-mode .detail-panel h3 {
+            margin: 0 0 16px;
+            font-size: clamp(26px, 2.8vw, 38px);
+            font-weight: 500;
+            line-height: 1.16;
+        }
+        body.site-mode .detail-panel p {
+            margin: 0 0 14px;
+            font-size: clamp(18px, 1.7vw, 24px);
+            line-height: 1.68;
+        }
+        body.site-mode .detail-panel p:last-child { margin-bottom: 0; }
+        body.site-mode .story-photo {
+            display: grid;
+            grid-template-columns: minmax(340px, .9fr) minmax(0, 1fr);
+            gap: 30px;
+            align-items: stretch;
+            margin-top: 34px;
+            border: 2px solid currentColor;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(255,255,255,.16);
+        }
+        body.site-mode .story-photo.reverse {
+            grid-template-columns: minmax(0, 1fr) minmax(280px, .72fr);
+        }
+        body.site-mode .story-photo img {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            max-height: 460px;
+            object-fit: cover;
+        }
+        body.site-mode .story-photo.reverse img {
+            order: 2;
+        }
+        body.site-mode .col-img .story-photo,
+        body.site-mode .col-img .story-photo.reverse {
+            grid-template-columns: 1fr;
+            margin-top: 0;
+            text-align: left;
+        }
+        body.site-mode .col-img .story-photo.reverse img {
+            order: 0;
+        }
+        body.site-mode .col-img .story-photo img {
+            min-height: 360px;
+            max-height: 520px;
+        }
+        body.site-mode .story-photo img.portrait-focus-top {
+            object-position: center top;
+        }
+        body.site-mode .col-img .story-photo.cambridge-fullbody-card {
+            align-self: stretch;
+        }
+        body.site-mode .col-img .story-photo.cambridge-fullbody-card img {
+            width: 100%;
+            height: auto;
+            min-height: 0;
+            max-height: none;
+            object-fit: contain;
+            object-position: center top;
+            background: rgba(255,255,255,.12);
+        }
+        body.site-mode .col-img .story-photo.cambridge-fullbody-card .story-photo-text {
+            padding: 24px 26px;
+        }
+        body.site-mode .col-img .story-photo-text,
+        body.site-mode .col-img .story-photo.reverse .story-photo-text {
+            padding: 26px;
+        }
+        body.site-mode .col-img .story-photo-text h3 {
+            font-size: clamp(26px, 2.6vw, 38px);
+        }
+        body.site-mode .col-img .story-photo-text p {
+            font-size: clamp(17px, 1.45vw, 22px);
+        }
+        body.site-mode .story-photo-text {
+            padding: 30px 30px 30px 0;
+            align-self: center;
+        }
+        body.site-mode .story-photo.reverse .story-photo-text {
+            padding: 30px 0 30px 30px;
+        }
+        body.site-mode .story-photo-text h3 {
+            margin: 0 0 14px;
+            font-size: clamp(28px, 3vw, 42px);
+            font-weight: 500;
+            line-height: 1.12;
+        }
+        body.site-mode .story-photo-text p {
+            margin: 0;
+            font-size: clamp(18px, 1.7vw, 24px);
+            line-height: 1.62;
+        }
+        body.site-mode .wide-photo {
+            margin: 34px 0 0;
+            border: 2px solid currentColor;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(255,255,255,.16);
+        }
+        body.site-mode .wide-photo img {
+            width: 100%;
+            height: clamp(300px, 38vw, 520px);
+            object-fit: cover;
+        }
+        body.site-mode .wide-photo figcaption {
+            padding: 20px 26px 24px;
+            font-size: clamp(18px, 1.7vw, 23px);
+            line-height: 1.55;
+        }
+        body.site-mode .wide-photo figcaption span {
+            display: block;
+            margin-bottom: 8px;
+            font-family: var(--font-mono);
+            font-size: 16px;
+            letter-spacing: .08em;
+            color: currentColor;
+        }
+        body.site-mode .memory-gallery {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+            gap: 24px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 36px auto 0;
+        }
+        body.site-mode .memory-stack {
+            display: grid;
+            gap: 24px;
+        }
+        body.site-mode .memory-card {
+            position: relative;
+            min-height: 280px;
+            border: 2px solid currentColor;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(255,255,255,.14);
+        }
+        body.site-mode .memory-card img {
+            width: 100%;
+            height: 100%;
+            min-height: inherit;
+            object-fit: cover;
+            display: block;
+        }
+        body.site-mode .memory-card.tall {
+            min-height: 584px;
+        }
+        body.site-mode .memory-card.wide {
+            min-height: 360px;
+        }
+        body.site-mode .memory-card.portrait {
+            min-height: 584px;
+        }
+        body.site-mode .memory-caption {
+            position: absolute;
+            left: 16px;
+            right: 16px;
+            bottom: 16px;
+            padding: 12px 14px;
+            border: 1.5px solid rgba(255,255,255,.75);
+            border-radius: 6px;
+            background: rgba(31, 58, 46, .78);
+            color: var(--cream);
+            font-size: clamp(15px, 1.15vw, 18px);
+            line-height: 1.45;
+            backdrop-filter: blur(8px);
+        }
+        body.site-mode .memory-caption span {
+            display: block;
+            margin-bottom: 4px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            letter-spacing: .08em;
+        }
+        body.site-mode .japan-gallery {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+        body.site-mode .japan-gallery .memory-card {
+            min-height: 360px;
+        }
+        body.site-mode .hall-gallery {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: stretch;
+            gap: 24px;
+            max-width: 980px;
+            margin-top: 42px;
+        }
+        body.site-mode .hall-gallery .memory-card {
+            aspect-ratio: 1 / 1;
+            min-height: 0;
+        }
+        body.site-mode .hall-gallery .memory-card img {
+            min-height: 0;
+        }
+        body.site-mode .hall-gallery .memory-card:nth-child(1) img {
+            object-position: 50% 46%;
+        }
+        body.site-mode .hall-gallery .memory-card:nth-child(2) img {
+            object-position: 50% 50%;
+        }
+        body.site-mode .flute-gallery {
+            grid-template-columns: .82fr 1.18fr;
+        }
+        body.site-mode .flute-gallery .memory-card {
+            min-height: 420px;
+        }
+        body.site-mode .flute-gallery .memory-card.portrait img {
+            object-position: center top;
+        }
+        body.site-mode .nav-dots,
+        body.site-mode .keyboard-hint {
+            display: none !important;
+        }
+        @media (max-width: 820px) {
+            body.site-mode .site-nav {
+                position: static;
+                display: block;
+                padding: 14px 18px;
+            }
+            body.site-mode .site-nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px 14px;
+                margin-top: 10px;
+                justify-content: flex-start;
+            }
+            body.site-mode .slide-inner {
+                width: min(100% - 32px, 1180px);
+                padding: 56px 0 !important;
+            }
+            body.site-mode .slide-inner::before {
+                width: 72px;
+                height: 72px;
+                top: 60px;
+                right: 4px;
+            }
+            body.site-mode .slide-inner::after,
+            body.site-mode .deco-stickers {
+                display: none;
+            }
+            body.site-mode .col-2,
+            body.site-mode .side-by-side-img,
+            body.site-mode .meta-dl,
+            body.site-mode .story-photo,
+            body.site-mode .story-photo.reverse,
+            body.site-mode .memory-gallery,
+            body.site-mode .japan-gallery {
+                grid-template-columns: 1fr;
+            }
+            body.site-mode .memory-card,
+            body.site-mode .memory-card.tall,
+            body.site-mode .memory-card.wide,
+            body.site-mode .memory-card.portrait,
+            body.site-mode .japan-gallery .memory-card,
+            body.site-mode .hall-gallery .memory-card {
+                min-height: 320px;
+            }
+            body.site-mode .story-photo.reverse img { order: 0; }
+            body.site-mode .story-photo-text,
+            body.site-mode .story-photo.reverse .story-photo-text {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body class="site-mode">
+    <header class="site-nav">
+        <div class="site-nav-brand">HUA ZIYI / 9226A028</div>
+        <div class="site-nav-links" aria-label="Portfolio navigation">
+            <a href="#top">ホーム</a>
+            <a href="#china">中国</a>
+            <a href="#cambridge">イギリス</a>
+            <a href="#japan">日本</a>
+            <a href="#future">目標</a>
+        </div>
+    </header>
+    <nav class="nav-dots"></nav>
+
+    <!-- Slide 01: Cover -->
+    <section class="slide visible" id="top">
+        <div class="slide-inner bg-green" style="padding: 100px 140px;"><div class="deco-stickers">
+                    <span class="sticker note s1">♪</span>
+                    <span class="sticker round s2">音</span>
+                    <span class="sticker tag s3">FIELD</span>
+                    <span class="sticker note s4">NOTE</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PORTFOLIO</div>
+                <div class="monogram-circle">HZ</div>
+            </div>
+            <div class="slide-content" style="justify-content: center; flex: 1;">
+                <div class="hero-title-block">
+                    <div class="hero-kicker reveal in-view">PORTFOLIO / MUSIC &amp; CULTURE</div>
+                    <h1 class="display-hero reveal in-view" style="color: var(--pink);">
+                        <span class="hero-title-line">音楽を巡る</span>
+                        <span class="hero-title-line indent">異文化の旅</span>
+                    </h1>
+                    <p class="body-lg hero-lead reveal in-view">演奏経験と異文化視座からの学びと探究 —— 武漢、イギリス、日本へと続く音楽学研究の軌跡</p>
+                </div>
+                <dl class="student-meta reveal in-view">
+                    <div>
+                        <dt>氏名</dt>
+                        <dd>HUA ZIYI</dd>
+                    </div>
+                    <div>
+                        <dt>学籍番号</dt>
+                        <dd>9226A028</dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="footline">
+                <div>ACADEMIC REPORT</div>
+                <div>2026</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 02: Agenda -->
+    <section class="slide visible" id="overview">
+        <div class="slide-inner bg-cream"><div class="deco-stickers">
+                    <span class="sticker note s1">01</span>
+                    <span class="sticker round s2">練習</span>
+                    <span class="sticker tag s3">ARCHIVE</span>
+                    <span class="sticker note s4">♬</span>
+                </div>
+            <div class="topbar">
+                <div class="label">AGENDA</div>
+                <div class="label-tight">01</div>
+            </div>
+            <div class="slide-content">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; width: 100%; max-width: 1400px; margin: 0 auto;">
+                    <div class="topic-tile tile-green reveal in-view">
+                        <div class="label-tight">01</div>
+                        <h2 class="title-card-lg">音楽との出会い</h2>
+                        <div class="caption-mono" style="margin-top: auto;">WUHAN, CHINA</div>
+                    </div>
+                    <div class="topic-tile tile-pink reveal in-view" style="transition-delay: 0.1s;">
+                        <div class="label-tight">02</div>
+                        <h2 class="title-card-lg">音楽学への探求</h2>
+                        <div class="caption-mono" style="margin-top: auto;">WUHAN, CHINA</div>
+                    </div>
+                    <div class="topic-tile tile-green-lite reveal in-view" style="transition-delay: 0.2s;">
+                        <div class="label-tight">03</div>
+                        <h2 class="title-card-lg">研究の広がり</h2>
+                        <div class="caption-mono" style="margin-top: auto;">CAMBRIDGE, UK</div>
+                    </div>
+                    <div class="topic-tile tile-cream-2 reveal in-view" style="transition-delay: 0.3s;">
+                        <div class="label-tight">04</div>
+                        <h2 class="title-card-lg">東アジアの視座</h2>
+                        <div class="caption-mono" style="margin-top: auto;">TOKYO, JAPAN</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footline">
+                <div>OVERVIEW</div>
+                <div>PAGE 01</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 03: Intro -->
+    <section class="slide visible" id="introduction">
+        <div class="slide-inner bg-pink"><div class="deco-stickers">
+                    <span class="sticker note s1">02</span>
+                    <span class="sticker round s2">研究</span>
+                    <span class="sticker tag s3">TEXT</span>
+                    <span class="sticker note s4">♪</span>
+                </div>
+            <div class="topbar">
+                <div class="label">INTRODUCTION</div>
+                <div class="label-tight">02</div>
+            </div>
+            <div class="slide-content" style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="headline-xl reveal in-view" style="margin-bottom: 50px;">音楽と私 —— テーマ紹介</h2>
+                <p class="body reveal in-view" style="margin-bottom: 24px;">私にとって音楽は、単なる趣味ではなく、自己の成長や考え方に大きな影響を与えてきた大切な存在です。</p>
+                <p class="body reveal in-view" style="margin-bottom: 24px; transition-delay: 0.1s;">音楽を学ぶ中で、技術的な練習にとどまらず、「音楽がどのような文化の中で生まれ、どのように受け継がれてきたのか」という文化的な背景への関心を抱くようになりました。</p>
+                <p class="body reveal in-view" style="transition-delay: 0.2s;">中国・イギリス・日本という異なる環境で生活し学ぶ過程で、それぞれの国における音楽の学び方や価値観の違いに気づきました。本ポートフォリオでは、演奏経験と音楽学の学び、そして日常生活の経験をつなぎ合わせながら、私にとっての「音楽とは何か」を探求します。</p>
+            </div>
+            <div class="footline">
+                <div>PERSONAL BACKGROUND</div>
+                <div>PAGE 02</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 04: China Flute -->
+    <section class="slide visible" id="china">
+        <div class="slide-inner bg-cream"><div class="deco-stickers">
+                    <span class="sticker note s1">03</span>
+                    <span class="sticker round s2">中国</span>
+                    <span class="sticker tag s3">WUHAN</span>
+                    <span class="sticker note s4">♩</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 01 • EARLY PRACTICE</div>
+                <div class="label-tight">03</div>
+            </div>
+            <div class="col-2">
+                <div class="col-text reveal in-view">
+                    <h2 class="headline-xl" style="margin-bottom: 40px;">フルートとの出会い</h2>
+                    <p class="body" style="margin-bottom: 24px;">私が音楽を始めたのは5歳のときで、最初はピアノを習い始めました。その後、8歳でフルートと出会い、本格的な学習をスタートさせました。</p>
+                    <p class="body" style="margin-bottom: 24px;">高校進学の際、より専門的に音楽を学びたいと考え、武漢音楽学院附属中学校へ進学しました。</p>
+                    <p class="body">附属中学校では、演奏技術の向上にとどまらず、音楽理論、ソルフェージュ、アンサンブルなど、体系的な専門教育を受けました。この時期の基礎的な訓練が、その後の音楽大学での学習や音楽学研究の揺るぎない土台となっています。</p>
+                    <div class="detail-panel">
+                        <h3>基礎訓練から専門的な学びへ</h3>
+                        <p>フルートを学び始めた当初は、音を安定して出すことや息をコントロールすることに苦労しました。しかし、毎日の基礎練習を続ける中で、少しずつ自分の身体と楽器の関係を理解できるようになり、演奏することの楽しさと達成感を感じるようになりました。</p>
+                        <p>附属中学校での学びは、単に演奏技術を磨くだけではありませんでした。音楽理論やソルフェージュ、アンサンブルを体系的に学ぶことで、作品を聴く力、読み解く力、他者と音楽を共有する力が育ちました。</p>
+                    </div>
+                </div>
+                <div class="col-img reveal in-view" style="transition-delay: 0.2s;">
+                    <img src="./music_cross_cultural_journey_assets/图片6_1oh8.png" alt="Wuhan Conservatory Banner">
+                    <aside class="image-note">
+                        <h3>演奏の基礎</h3>
+                        <dl>
+                            <div>
+                                <dt>5歳</dt>
+                                <dd>ピアノを始め、音楽に親しむ。</dd>
+                            </div>
+                            <div>
+                                <dt>8歳</dt>
+                                <dd>フルートと出会い、専門的な練習へ進む。</dd>
+                            </div>
+                            <div>
+                                <dt>武漢</dt>
+                                <dd>演奏・理論・アンサンブルを体系的に学ぶ。</dd>
+                            </div>
+                        </dl>
+                    </aside>
+                </div>
+            </div>
+            <figure class="wide-photo reveal in-view">
+                <img src="./music_cross_cultural_journey_assets/flute-performance-hua-web.jpg" alt="フルート演奏の写真">
+                <figcaption><span>フルート演奏</span>幼いころから積み重ねてきた基礎練習と舞台経験は、音楽を身体で理解するための大切な出発点でした。息、音色、指の動き、周囲の響きに集中する演奏経験は、後の音楽学研究にもつながっています。</figcaption>
+            </figure>
+            <div class="memory-gallery flute-gallery reveal in-view">
+                <figure class="memory-card portrait">
+                    <img src="./music_cross_cultural_journey_assets/flute-concert-memory-web.jpg" alt="コンサートホールでの長笛に関する記念写真">
+                    <figcaption class="memory-caption"><span>STAGE MEMORY</span>演奏会場での経験は、音楽を学ぶ喜びと舞台に立つ責任を強く感じる時間でした。</figcaption>
+                </figure>
+                <figure class="memory-card wide">
+                    <img src="./music_cross_cultural_journey_assets/flute-stage-performance-web.jpg" alt="長笛演奏の舞台写真">
+                    <figcaption class="memory-caption"><span>ENSEMBLE</span>仲間と音を合わせる経験を通して、呼吸、響き、協調性の大切さを学びました。</figcaption>
+                </figure>
+            </div>
+            <figure class="story-photo reveal in-view">
+                <img src="./music_cross_cultural_journey_assets/wuhan-graduation-hua-web.jpg" alt="武漢での学生時代の写真">
+                <figcaption class="story-photo-text">
+                    <h3>武漢で過ごした形成期</h3>
+                    <p>中国での学生生活は、演奏者としての基礎と研究者としての関心が重なり始めた時期でした。日々の練習、授業、仲間との交流を通して、音楽を専門的に学ぶ覚悟と、自分の進む方向が少しずつ形になっていきました。</p>
+                </figcaption>
+            </figure>
+            <div class="footline">
+                <div>WUHAN CONSERVATORY OF MUSIC</div>
+                <div>PAGE 03</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 05: China Orchestra -->
+    <section class="slide visible" id="china-performance">
+        <div class="slide-inner bg-cream"><div class="deco-stickers">
+                    <span class="sticker note s1">03</span>
+                    <span class="sticker round s2">中国</span>
+                    <span class="sticker tag s3">WUHAN</span>
+                    <span class="sticker note s4">♩</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 01 • PERFORMANCE</div>
+                <div class="label-tight">04</div>
+            </div>
+            <div class="slide-content" style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="headline-xl reveal in-view" style="margin-bottom: 50px;">アンサンブルと演奏活動</h2>
+                <p class="body reveal in-view" style="margin-bottom: 30px;">武漢音楽学院で学ぶ中で、学内オーケストラに所属し、多くの学生や観客の前で演奏する機会に恵まれました。個人の演奏とは異なり、周囲の音を聴きながら協調して一つの音楽作品を創り上げる過程は、私の音楽的感受性を大いに養いました。</p>
+                <p class="body reveal in-view" style="transition-delay: 0.1s;">さらに、学校外では趣味として、ACG（アニメ・コミック・ゲーム）音楽を演奏するアマチュア交響楽団にも参加していました。クラシック音楽の枠を越えた多様なレパートリーに触れることで、幅広い表現の可能性を実感するとともに、共通の趣味を持つ仲間と音楽を通してつながる喜びを深く経験しました。</p>
+                <div class="detail-panel reveal in-view">
+                    <h3>演奏経験から得たもの</h3>
+                    <p>演奏会や定期演奏会では、舞台上で音楽を表現する緊張感と責任を経験しました。自分の音だけでなく、周囲の呼吸、テンポ、響きを聴き取りながら演奏することは、協調性と集中力を鍛える重要な機会でした。</p>
+                    <p>また、クラシック以外のレパートリーに触れることで、音楽は専門的な訓練の対象であると同時に、人と人を結びつける日常的な楽しみでもあることを実感しました。この経験は、後に音楽を文化的・社会的な視点から考える土台にもなっています。</p>
+                </div>
+            </div>
+            <div class="footline">
+                <div>MUSICAL ACTIVITIES</div>
+                <div>PAGE 04</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 06: China Musicology -->
+    <section class="slide visible" id="china-musicology">
+        <div class="slide-inner bg-pink"><div class="deco-stickers">
+                    <span class="sticker note s1">03</span>
+                    <span class="sticker round s2">中国</span>
+                    <span class="sticker tag s3">WUHAN</span>
+                    <span class="sticker note s4">♩</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 01 • ACADEMIC VISION</div>
+                <div class="label-tight">05</div>
+            </div>
+            <div class="col-2">
+                <div class="col-img reveal in-view">
+                    <img src="./music_cross_cultural_journey_assets/图片7_ec4r.png" alt="Academic Lecture" style="border: 2px solid var(--green-deep);">
+                </div>
+                <div class="col-text reveal in-view" style="transition-delay: 0.2s;">
+                    <h2 class="headline" style="margin-bottom: 40px;">音楽学への導入</h2>
+                    <p class="body" style="margin-bottom: 24px;">大学は中国を代表する音楽専門教育機関である武漢音楽学院の音楽学系に進学しました。ここから、純粋な演奏者から研究者への本格的な転換が始まりました。</p>
+                    <p class="body" style="margin-bottom: 24px;">西洋音楽史、中国音楽史、音楽美学などを学ぶ中で、バロック時代からロマン派に至る音楽の発展が、宗教や政治、社会の変化と密接に関わっていることを理解しました。</p>
+                    <p class="body">音楽を単なる芸術作品として捉えるのではなく、歴史や社会の文脈から解き明かす学問の魅力に強く惹きつけられました。</p>
+                    <div class="detail-panel">
+                        <h3>研究者としての視点の形成</h3>
+                        <p>大学では、作品を「美しい音楽」として鑑賞するだけではなく、それがどのような制度、思想、社会的背景の中で生まれたのかを考える姿勢を学びました。授業での発表やディスカッション、期末レポートの執筆を通して、資料を集め、分析し、自分の考えを論理的に組み立てる力が少しずつ身につきました。</p>
+                        <p>さらに、民族音楽学や文化研究に触れることで、音楽を一つの固定された作品としてではなく、地域、歴史、身体、記憶と結びついた動的な文化現象として理解するようになりました。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footline">
+                <div>THEORETICAL STUDY</div>
+                <div>PAGE 05</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 07: China Fieldwork -->
+    <section class="slide visible" id="china-fieldwork">
+        <div class="slide-inner bg-green" style="padding: 100px 120px;"><div class="deco-stickers">
+                    <span class="sticker note s1">03</span>
+                    <span class="sticker round s2">中国</span>
+                    <span class="sticker tag s3">WUHAN</span>
+                    <span class="sticker note s4">♩</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 01 • FIELDWORK &amp; ANALYSIS</div>
+                <div class="label-tight">06</div>
+            </div>
+            <div class="slide-content" style="justify-content: flex-start;">
+                <h2 class="headline">理論と実践を通した学び</h2>
+                <div class="side-by-side-img reveal in-view">
+                    <img src="./music_cross_cultural_journey_assets/图片5_bc33.png" alt="Traditional Chinese Stage" style="border: 2px solid var(--pink);">
+                    <img src="./music_cross_cultural_journey_assets/图片8_so11.png" alt="Traditional Instrument" style="border: 2px solid var(--pink);">
+                </div>
+                <p class="body reveal in-view" style="max-width: 1200px; margin: 0 auto; text-align: center;">楽譜分析の授業では、作品の構造や和声進行の論理性を発見し、批判的思考力を養いました。同時に、実地でのフィールドワークに赴き、伝統芸能や地域の音楽文化に直接触れることで、教室の中だけでは得られない「生きた文化」としての音楽を体感し、多角的な研究能力を身につけました。</p>
+                <div class="detail-panel reveal in-view" style="max-width: 1200px; margin-left: auto; margin-right: auto;">
+                    <h3>理論と現場を結びつける学習</h3>
+                    <p>フィールドワークでは、地域の音楽文化や伝統芸能に直接触れることで、文献だけでは見えにくい音楽の機能を理解することができました。演奏者の身体の使い方、観客との距離、場の雰囲気、言葉では説明しきれない音の質感は、音楽を研究する上で重要な情報でした。</p>
+                    <p>この経験を通して、音楽学は書物の中だけに閉じた学問ではなく、実際の社会や人々の生活と結びついた学問であると感じるようになりました。</p>
+                </div>
+            </div>
+            <div class="footline">
+                <div>PRACTICE &amp; FIELDWORK</div>
+                <div>PAGE 06</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 08: UK Cambridge Seminars -->
+    <section class="slide visible" id="cambridge">
+        <div class="slide-inner bg-cream"><div class="deco-stickers">
+                    <span class="sticker note s1">04</span>
+                    <span class="sticker round s2">英国</span>
+                    <span class="sticker tag s3">MPhil</span>
+                    <span class="sticker note s4">♪</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 02 • CAMBRIDGE</div>
+                <div class="label-tight">07</div>
+            </div>
+            <div class="col-2">
+                <div class="col-text reveal in-view">
+                    <h2 class="headline-xl" style="margin-bottom: 40px;">大学院での新しい学習環境</h2>
+                    <p class="body" style="margin-bottom: 24px;">学部卒業後、イギリスのケンブリッジ大学音楽学部に進学し、MPhil in Musicを履修しました。ここでは、これまでの受動的な学習とは大きく異なり、より自主的で研究中心の教育が行われていました。</p>
+                    <p class="body">授業はセミナー形式が主体で、膨大な重要文献を読み込むことが前提とされました。教員が知識を一方的に伝えるのではなく、学生同士が自由に意見を交換し、英語での激しい議論を通じて自らの論理を整理する力が求められました。</p>
+                    <div class="detail-panel">
+                        <h3>自ら問いを立てる学び</h3>
+                        <p>イギリスでの学習では、授業前に多くの文献を読み込み、自分の疑問や意見を準備することが不可欠でした。最初は英語で発言することに緊張しましたが、議論を重ねる中で、研究とは既存の答えを覚えることではなく、自分で問題を設定し、根拠をもって考える営みであると実感しました。</p>
+                        <p>大学図書館や学部図書館、オンラインデータベースなどの豊富な研究資源に触れたことも大きな刺激でした。資料を探し、比較し、読み解く過程そのものが、研究者としての基礎訓練になりました。</p>
+                    </div>
+                </div>
+                <div class="col-img reveal in-view" style="transition-delay: 0.2s;">
+                    <figure class="story-photo reverse cambridge-fullbody-card">
+                        <img class="portrait-focus-top" src="./music_cross_cultural_journey_assets/uk-portrait-hua-web.jpg" alt="イギリスでの学位授与式の写真">
+                        <figcaption class="story-photo-text">
+                            <h3>英国での学びを経て</h3>
+                            <p>イギリスでの大学院生活は、研究の厳しさと同時に、自分の考えを言葉にして発信する重要性を教えてくれました。学位取得の経験は、これまでの学びを一つの節目として確認し、次の研究へ進むための大きな支えになっています。</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="footline">
+                <div>MPHIL IN MUSIC</div>
+                <div>PAGE 07</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 09: UK Turandot Thesis -->
+    <section class="slide visible" id="cambridge-research">
+        <div class="slide-inner bg-pink"><div class="deco-stickers">
+                    <span class="sticker note s1">04</span>
+                    <span class="sticker round s2">英国</span>
+                    <span class="sticker tag s3">MPhil</span>
+                    <span class="sticker note s4">♪</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 02 • RESEARCH</div>
+                <div class="label-tight">08</div>
+            </div>
+            <div class="col-2">
+                <div class="col-img reveal in-view">
+                    <img src="./music_cross_cultural_journey_assets/图片2_axad.png" alt="Bookshelf" style="border: 2px solid var(--green-deep);">
+                </div>
+                <div class="col-text reveal in-view" style="transition-delay: 0.2s;">
+                    <h2 class="headline" style="margin-bottom: 40px;">修士論文：<br>《トゥーランドット》研究</h2>
+                    <p class="body" style="margin-bottom: 24px;">修士論文では、中国におけるプッチーニ《トゥーランドット》の受容をテーマとしました。特に中国人作曲家ハオ・ウェイヤによる2008年版終幕に注目し、中国と西洋における作品解釈の違いを考察しました。</p>
+                    <p class="body">音楽分析だけでなく、文化研究、受容史研究、オリエンタリズム批判など、複数の方法論を組み合わせることで、音楽を社会や文化との関係の中で深く理解する視座を確立しました。</p>
+                    <div class="detail-panel">
+                        <h3>受容史研究への関心</h3>
+                        <p>《トゥーランドット》は西洋オペラでありながら、中国を想像し、表象してきた作品でもあります。そのため、この作品を研究することは、単なる音楽分析にとどまらず、異文化表象、翻案、文化的再解釈の問題を考えることにつながりました。</p>
+                        <p>ハオ・ウェイヤによる終幕に注目することで、中国側からこの作品がどのように再解釈され、どのような意味を与えられてきたのかを考察しました。この研究は、現在の東アジアにおける西洋オペラ受容史への関心の中心になっています。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footline">
+                <div>THESIS &amp; METHODOLOGY</div>
+                <div>PAGE 08</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 10: UK Academic Exchange -->
+    <section class="slide visible" id="cambridge-turandot">
+        <div class="slide-inner bg-cream"><div class="deco-stickers">
+                    <span class="sticker note s1">04</span>
+                    <span class="sticker round s2">英国</span>
+                    <span class="sticker tag s3">MPhil</span>
+                    <span class="sticker note s4">♪</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 02 • ACADEMIC EXCHANGE</div>
+                <div class="label-tight">09</div>
+            </div>
+            <div class="slide-content" style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="headline-xl reveal in-view" style="margin-bottom: 50px;">学会発表と学際的交流</h2>
+                <p class="body reveal in-view" style="margin-bottom: 30px;">ケンブリッジでは頻繁に研究発表会やコロキアムが開催されており、私も修士論文に関するプレゼンテーションを行いました。自らの研究を他の学生や教員に向けて論理的かつ分かりやすく伝える訓練は、研究者としての表現力を大きく向上させました。</p>
+                <p class="body reveal in-view" style="transition-delay: 0.1s;">さらに、音楽学だけでなく、歴史学、文学、社会学など、専門分野の異なる研究者や学生との交流を通じて、新しい視点や研究方法に触れることができました。このような学際的な対話は、自分の研究を多角的に見直し、発展させる貴重な機会となりました。</p>
+                <div class="detail-panel reveal in-view">
+                    <h3>研究を伝える力</h3>
+                    <p>研究発表では、限られた時間の中で研究背景、問題意識、方法論、結論を整理して伝える必要がありました。発表後の質問やコメントは、自分では気づかなかった論点を明確にし、論文の構成を見直すきっかけになりました。</p>
+                    <p>異なる分野の学生や研究者との対話を通して、音楽学は単独の領域ではなく、歴史学、文学、社会学、文化研究と深く関係する学際的な学問であることを改めて認識しました。</p>
+                </div>
+            </div>
+            <div class="footline">
+                <div>COLLOQUIUM &amp; DISCUSSIONS</div>
+                <div>PAGE 09</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 11: UK Life -->
+    <section class="slide visible" id="cambridge-life">
+        <div class="slide-inner bg-green" style="padding: 100px 120px;"><div class="deco-stickers">
+                    <span class="sticker note s1">04</span>
+                    <span class="sticker round s2">英国</span>
+                    <span class="sticker tag s3">MPhil</span>
+                    <span class="sticker note s4">♪</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 02 • LIFE &amp; GROWTH</div>
+                <div class="label-tight">10</div>
+            </div>
+            <div class="slide-content" style="justify-content: flex-start;">
+                <h2 class="headline-xl">学術と生活のバランス</h2>
+                <div class="side-by-side-img reveal in-view">
+                    <img src="./music_cross_cultural_journey_assets/图片3_5bzo.png" alt="Cambridge River" style="border: 2px solid var(--green);">
+                    <img src="./music_cross_cultural_journey_assets/图片4_uthr.png" alt="Cambridge Tree" style="border: 2px solid var(--green);">
+                </div>
+                <p class="body reveal in-view" style="max-width: 1200px; margin: 0 auto; text-align: center;">大量の課題、英語での高度な学習、優秀な学生に囲まれるプレッシャーなど多くの挑戦に直面しましたが、歴史あるキャンパスの自然は心の平穏を保つ助けとなりました。答えを教わるのではなく「自ら問いを立てる姿勢」を身につけ、自立した研究者としての基盤を築きました。</p>
+                <div class="detail-panel reveal in-view" style="max-width: 1200px; margin-left: auto; margin-right: auto;">
+                    <h3>生活の中で育った自己管理能力</h3>
+                    <p>ケンブリッジでの生活では、課題、文献読解、研究計画、発表準備を同時に進める必要がありました。限られた時間の中で優先順位を決め、自分で学習を管理する経験は、研究者としての自立に直結するものでした。</p>
+                    <p>一方で、学内の講演会やコンサート、学生団体の活動にも触れることで、授業外の学びの豊かさを感じました。学術と生活が近い距離で結びつく環境は、私にとって大きな成長の場でした。</p>
+                </div>
+                <div class="memory-gallery reveal in-view">
+                    <figure class="memory-card tall">
+                        <img src="./music_cross_cultural_journey_assets/uk-cambridge-architecture-web.jpg" alt="ケンブリッジの歴史的建築">
+                        <figcaption class="memory-caption"><span>CAMBRIDGE</span>歴史ある建築に囲まれた環境は、毎日の学びに静かな緊張感と集中力を与えてくれました。</figcaption>
+                    </figure>
+                    <div class="memory-stack">
+                        <figure class="memory-card">
+                            <img src="./music_cross_cultural_journey_assets/uk-beethoven-sonatas-web.jpg" alt="ベートーヴェンのソナタ集">
+                            <figcaption class="memory-caption"><span>READING</span>楽譜や文献を手に取り、作品を資料として読み解く姿勢を深めました。</figcaption>
+                        </figure>
+                        <figure class="memory-card">
+                            <img src="./music_cross_cultural_journey_assets/uk-degree-ceremony-2-web.jpg" alt="ケンブリッジでの学位授与式">
+                            <figcaption class="memory-caption"><span>GRADUATION</span>修士課程の経験は、研究者として次の段階へ進む大切な節目となりました。</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="footline">
+                <div>CAMBRIDGE LIFE</div>
+                <div>PAGE 10</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 12: Japan Language -->
+    <section class="slide visible" id="japan">
+        <div class="slide-inner bg-cream"><div class="deco-stickers">
+                    <span class="sticker note s1">05</span>
+                    <span class="sticker round s2">日本</span>
+                    <span class="sticker tag s3">TOKYO</span>
+                    <span class="sticker note s4">♬</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 03 • JAPAN STUDIES</div>
+                <div class="label-tight">11</div>
+            </div>
+            <div class="slide-content" style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="headline-xl reveal in-view" style="margin-bottom: 50px;">言語と文化への挑戦</h2>
+                <p class="body reveal in-view" style="margin-bottom: 30px;">ケンブリッジ大学修了後、学術研究における一次資料に直接アクセスすることの重要性を痛感し、日本で日本語を学ぶことを決意しました。現在は早稲田大学で、読解だけでなく作文やプレゼンテーションにも取り組んでいます。</p>
+                <p class="body reveal in-view" style="transition-delay: 0.1s;">また、単なる語学学習にとどまらず、博物館や美術館を訪れたり、伝統文化に触れたりすることで、日本独自の礼儀や人間関係、季節を大切にする文化を実体験として深く理解するよう努めています。</p>
+                <div class="detail-panel reveal in-view">
+                    <h3>日本語学習と研究の接点</h3>
+                    <p>日本語を学ぶことは、単に新しい言語を習得することではなく、日本における音楽研究や一次資料へ直接アクセスするための重要な準備でもあります。読解、作文、発表、ディスカッションを通じて、自分の考えを日本語で論理的に表現する力を少しずつ高めています。</p>
+                    <p>日本での生活を通して、文化は本や映像だけで理解できるものではなく、日常の振る舞い、人との距離、季節感、大学での交流の中で体感されるものだと感じるようになりました。</p>
+                </div>
+                <div class="memory-gallery japan-gallery reveal in-view">
+                    <figure class="memory-card">
+                        <img src="./music_cross_cultural_journey_assets/japan-debussy-records-web.jpg" alt="日本の音楽ショップで見たドビュッシーの展示">
+                        <figcaption class="memory-caption"><span>LISTENING</span>日本の音楽空間で、西洋音楽がどのように紹介されているかを観察しました。</figcaption>
+                    </figure>
+                    <figure class="memory-card">
+                        <img src="./music_cross_cultural_journey_assets/japan-contemporary-flyer-web.jpg" alt="現代音楽の紹介誌と映画祭チラシ">
+                        <figcaption class="memory-caption"><span>FIELD NOTE</span>コンサートや映画祭の資料から、現代文化の受容の形にも関心を広げています。</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="footline">
+                <div>LANGUAGE LEARNING</div>
+                <div>PAGE 11</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 13: Japan Concert Spaces -->
+    <section class="slide visible" id="japan-language">
+        <div class="slide-inner bg-green"><div class="deco-stickers">
+                    <span class="sticker note s1">05</span>
+                    <span class="sticker round s2">日本</span>
+                    <span class="sticker tag s3">TOKYO</span>
+                    <span class="sticker note s4">♬</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 03 • CONCERT EXPERIENCE</div>
+                <div class="label-tight">12</div>
+            </div>
+            <div class="slide-content" style="max-width: 1080px; margin: 0 auto; text-align: center;">
+                <h2 class="headline-xl reveal in-view" style="margin-bottom: 30px;">日本で触れた音楽空間</h2>
+                <p class="body reveal in-view" style="max-width: 920px; margin: 0 auto 28px;">日本での学びは、語学教室の中だけで完結するものではありませんでした。コンサートホールや音楽関連の展示、配布資料に触れることで、日本社会の中で音楽がどのように紹介され、聴かれ、記録されているのかを具体的に観察することができました。</p>
+                <div class="memory-gallery hall-gallery reveal in-view">
+                    <figure class="memory-card">
+                        <img src="./music_cross_cultural_journey_assets/japan-concert-hall-1-web.jpg" alt="日本のコンサートホール">
+                        <figcaption class="memory-caption"><span>CONCERT</span>演奏会場を訪れることは、音楽が社会の中で経験される場を知る機会です。</figcaption>
+                    </figure>
+                    <figure class="memory-card">
+                        <img src="./music_cross_cultural_journey_assets/japan-concert-hall-2-web.jpg" alt="日本のコンサートホール客席">
+                        <figcaption class="memory-caption"><span>SPACE</span>ホールの響き、観客の振る舞い、プログラム構成からも多くの学びがありました。</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="footline">
+                <div>CONCERT EXPERIENCE</div>
+                <div>PAGE 12</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 14: Japan Context -->
+    <section class="slide visible" id="japan-concerts">
+        <div class="slide-inner bg-pink" style="padding: 130px 160px;"><div class="deco-stickers">
+                    <span class="sticker note s1">05</span>
+                    <span class="sticker round s2">日本</span>
+                    <span class="sticker tag s3">TOKYO</span>
+                    <span class="sticker note s4">♬</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 03 • EAST ASIA VISION</div>
+                <div class="label-tight">13</div>
+            </div>
+            <div class="slide-content" style="align-items: center; justify-content: center; text-align: center;">
+                <div class="label" style="margin-bottom: 30px; color: var(--green-deep);">COMPARATIVE CONTEXT</div>
+                <h2 class="display" style="margin-bottom: 50px; color: var(--green-deep);">東アジアの視座を築く</h2>
+                <p class="body-lg" style="max-width: 1000px;">日本は、西洋音楽を積極的に受容しながらも独自の音楽文化を形成してきた国です。この特異な歴史的背景は、私の研究関心である「西洋オペラの東アジアにおける受容史」を中国と比較研究する上で、非常に重要な視座とインスピレーションを提供してくれます。</p>
+                <div class="detail-panel" style="max-width: 1000px; text-align: left;">
+                    <h3>中国・イギリス・日本をつなぐ研究へ</h3>
+                    <p>中国で音楽学の基礎を学び、イギリスで研究方法を身につけ、日本で言語と文化への理解を深める現在の歩みは、東アジアにおける西洋音楽受容を比較するための重要な準備です。</p>
+                    <p>今後は、日本語文献や史料も活用しながら、中国と日本における西洋オペラの受容、上演、批評、翻案の違いをより具体的に研究していきたいと考えています。</p>
+                </div>
+            </div>
+            <div class="footline">
+                <div>RESEARCH EXPANSION</div>
+                <div>PAGE 13</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 15: Timeline -->
+    <section class="slide visible" id="japan-context">
+        <div class="slide-inner bg-cream"><div class="deco-stickers">
+                    <span class="sticker note s1">06</span>
+                    <span class="sticker round s2">軌跡</span>
+                    <span class="sticker tag s3">ROUTE</span>
+                    <span class="sticker note s4">♪</span>
+                </div>
+            <div class="topbar">
+                <div class="label">TIMELINE</div>
+                <div class="label-tight">14</div>
+            </div>
+            <div class="slide-content">
+                <h2 class="headline" style="margin-bottom: 40px;">異文化の軌跡：目的・結果・学び</h2>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                    <div class="step-tile tile-green-lite reveal in-view" style="min-height: 420px; padding: 32px;">
+                        <div style="border-top: 2.5px solid currentColor; margin-bottom: 16px;"></div>
+                        <div class="label-tight">PHASE 1</div>
+                        <h3 class="title-card-sm" style="margin-bottom: 16px; font-size: 40px;">中国・武漢</h3>
+                        <div class="body-card" style="flex: 1; font-size: 22px; line-height: 1.4;">
+                            <p style="margin-bottom: 10px;"><strong>【目的】</strong><br>基礎知識と演奏技術の習得</p>
+                            <p style="margin-bottom: 10px;"><strong>【結果】</strong><br>演奏者から研究者への移行</p>
+                            <p><strong>【学び】</strong><br>歴史・社会の文脈から捉える視座</p>
+                        </div>
+                        <div class="caption-mono" style="margin-top: auto;">FOUNDATION</div>
+                    </div>
+                    <div class="step-tile tile-green reveal in-view" style="transition-delay: 0.1s; min-height: 420px; padding: 32px;">
+                        <div style="border-top: 2.5px solid currentColor; margin-bottom: 16px;"></div>
+                        <div class="label-tight">PHASE 2</div>
+                        <h3 class="title-card-sm" style="margin-bottom: 16px; font-size: 40px;">英国・ケンブリッジ</h3>
+                        <div class="body-card" style="flex: 1; font-size: 22px; line-height: 1.4;">
+                            <p style="margin-bottom: 10px;"><strong>【目的】</strong><br>自立した音楽学研究手法の獲得</p>
+                            <p style="margin-bottom: 10px;"><strong>【結果】</strong><br>修士論文（トゥーランドット受容史）完成</p>
+                            <p><strong>【学び】</strong><br>批判的思考と学際的アプローチ</p>
+                        </div>
+                        <div class="caption-mono" style="margin-top: auto;">RESEARCH</div>
+                    </div>
+                    <div class="step-tile tile-pink reveal in-view" style="transition-delay: 0.2s; min-height: 420px; padding: 32px;">
+                        <div style="border-top: 2.5px solid currentColor; margin-bottom: 16px;"></div>
+                        <div class="label-tight">PHASE 3</div>
+                        <h3 class="title-card-sm" style="margin-bottom: 16px; font-size: 40px;">日本・東京</h3>
+                        <div class="body-card" style="flex: 1; font-size: 22px; line-height: 1.4;">
+                            <p style="margin-bottom: 10px;"><strong>【目的】</strong><br>東アジア比較研究の言語と文化習得</p>
+                            <p style="margin-bottom: 10px;"><strong>【結果】</strong><br>語学力向上と日本社会の直接体験</p>
+                            <p><strong>【学び】</strong><br>異文化環境での研究の東アジア的展開</p>
+                        </div>
+                        <div class="caption-mono" style="margin-top: auto;">EXPANSION</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footline">
+                <div>TIMELINE &amp; MILESTONES</div>
+                <div>PAGE 14</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 16: Future PhD -->
+    <section class="slide visible" id="timeline">
+        <div class="slide-inner bg-cream"><div class="deco-stickers">
+                    <span class="sticker note s1">07</span>
+                    <span class="sticker round s2">未来</span>
+                    <span class="sticker tag s3">PLAN</span>
+                    <span class="sticker note s4">♬</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 04 • FUTURE GOALS</div>
+                <div class="label-tight">15</div>
+            </div>
+            <div class="slide-content" style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="headline-xl reveal in-view" style="margin-bottom: 50px;">博士課程への進学と研究の深化</h2>
+                <p class="body reveal in-view" style="margin-bottom: 30px;">今後は博士課程に進学し、プッチーニ《トゥーランドット》を中心とした西洋オペラが東アジアでどのように受容され、再解釈されてきたのかという研究をさらに発展させたいと考えています。</p>
+                <p class="body reveal in-view" style="transition-delay: 0.1s;">単一の作品にとどまらず、西洋音楽の異文化間での交流と融合を広く探求し、その背後にある文化政策や社会心理、オリエンタリズムの叙事にも深く注目していきます。</p>
+                <div class="detail-panel reveal in-view">
+                    <h3>将来の研究計画</h3>
+                    <p>博士課程では、《トゥーランドット》の上演史や批評資料を比較し、中国と日本においてこの作品がどのように受け取られ、再解釈されてきたのかを明らかにしたいと考えています。作品分析だけでなく、受容史、文化政策、翻案研究、オリエンタリズム批判を組み合わせることで、より立体的な研究を目指します。</p>
+                    <p>最終的には、西洋音楽が東アジアの社会や文化の中でどのように意味を変化させてきたのかを考察し、異文化間の相互理解に貢献できる研究者として成長したいです。</p>
+                </div>
+            </div>
+            <div class="footline">
+                <div>DOCTORAL STUDIES</div>
+                <div>PAGE 15</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 17: Future Vision -->
+    <section class="slide visible" id="future">
+        <div class="slide-inner bg-green" style="padding: 130px 160px;"><div class="deco-stickers">
+                    <span class="sticker note s1">07</span>
+                    <span class="sticker round s2">未来</span>
+                    <span class="sticker tag s3">PLAN</span>
+                    <span class="sticker note s4">♬</span>
+                </div>
+            <div class="topbar">
+                <div class="label">PART 04 • VISION</div>
+                <div class="label-tight">16</div>
+            </div>
+            <div class="slide-content" style="align-items: center; justify-content: center; text-align: center;">
+                <h2 class="display reveal in-view" style="margin-bottom: 50px; color: var(--pink);">将来の夢：<br>文化の架け橋として</h2>
+                <p class="body-lg reveal in-view" style="max-width: 1000px; color: var(--cream); transition-delay: 0.1s;">私の究極の目標は、国際的な視野を持った独立した音楽学研究者になることです。学術界に新たな知見をもたらすとともに、教育を通じてその成果を広く伝え、異なる文化の間に存在する相互理解を促進する架け橋になりたいと強く願っています。</p>
+            </div>
+            <div class="footline">
+                <div>CAREER GOAL</div>
+                <div>PAGE 16</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 18: Summary -->
+    <section class="slide visible" id="future-vision">
+        <div class="slide-inner bg-cream"><div class="deco-stickers">
+                    <span class="sticker note s1">08</span>
+                    <span class="sticker round s2">まとめ</span>
+                    <span class="sticker tag s3">FINAL</span>
+                    <span class="sticker note s4">♪</span>
+                </div>
+            <div class="topbar">
+                <div class="label">CONCLUSION</div>
+                <div class="label-tight">17</div>
+            </div>
+            <div class="slide-content" style="justify-content: center;">
+                <h2 class="headline-xl" style="max-width: 1200px; margin-bottom: 40px;">国境と分野を越えて：<br>多様な経験の融合</h2>
+                <p class="body" style="max-width: 1000px;">演奏者から研究者へ、中国での基礎教育からイギリスでの研究主導型学習、そして日本での異文化探求へと歩んできました。異なる環境での学びが、私に多角的な視野を与えてくれました。</p>
+                
+                <dl class="meta-dl reveal in-view">
+                    <div>
+                        <dt class="caption-mono">武漢・啓蒙</dt>
+                        <dd class="meta-value">演奏技術、音楽史の知識、フィールドワークの基礎を構築。</dd>
+                    </div>
+                    <div>
+                        <dt class="caption-mono">ケンブリッジ・探究</dt>
+                        <dd class="meta-value">自主的な研究力、批判的読解、学際的思考を育成。</dd>
+                    </div>
+                    <div>
+                        <dt class="caption-mono">東京・展開</dt>
+                        <dd class="meta-value">比較研究のための語学力と異文化理解の視点を拡大。</dd>
+                    </div>
+                    <div>
+                        <dt class="caption-mono">未来・架け橋</dt>
+                        <dd class="meta-value">単一の文化叙事を打ち破り、多様に交錯する音楽史を構築。</dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="footline">
+                <div>EXPERIENCE SYNTHESIS</div>
+                <div>PAGE 17</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 19: Statement -->
+    <section class="slide visible" id="summary">
+        <div class="slide-inner bg-green" style="padding: 130px 160px;"><div class="deco-stickers">
+                    <span class="sticker note s1">08</span>
+                    <span class="sticker round s2">まとめ</span>
+                    <span class="sticker tag s3">FINAL</span>
+                    <span class="sticker note s4">♪</span>
+                </div>
+            <div class="topbar">
+                <div class="label">CLOSING</div>
+                <div class="monogram-circle">HZ</div>
+            </div>
+            <div class="slide-content" style="justify-content: center;">
+                <h2 class="headline-xl reveal in-view" style="color: var(--pink); margin-bottom: 20px;">「音楽は普遍的な芸術であると同時に、</h2>
+                <h2 class="headline-xl reveal in-view" style="color: var(--cream);">それぞれの文化によって新たな意味が<br>与えられる生きた存在である。」</h2>
+                <div style="margin-top: 80px; text-align: right;">
+                    <div class="name reveal in-view" style="color: var(--cream);">HUA ZIYI</div>
+                </div>
+            </div>
+            <div class="footline">
+                <div>END OF PRESENTATION</div>
+                <div>2026</div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="keyboard-hint">↑↓キーまたはスペースキーでページをめくる</div>
+
+    <script>
+        class SlidePresentation {
+            constructor() {
+                this.slides = document.querySelectorAll('.slide');
+                this.dots = document.querySelector('.nav-dots');
+                this.current = 0;
+                this.setupObserver();
+                this.setupKeyboard();
+                this.setupDots();
+                this.hideHintOnScroll();
+            }
+            setupObserver() {
+                const obs = new IntersectionObserver(entries => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add('visible');
+                            this.current = [...this.slides].indexOf(e.target);
+                            this.updateDots();
+                        }
+                    });
+                }, { threshold: 0.5 });
+                this.slides.forEach(s => obs.observe(s));
+            }
+            setupKeyboard() {
+                window.addEventListener('keydown', e => {
+                    if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+                        if (e.target.isContentEditable) return; // Prevent navigation when editing
+                        e.preventDefault(); this.go(this.current + 1);
+                    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                        if (e.target.isContentEditable) return;
+                        e.preventDefault(); this.go(this.current - 1);
+                    }
+                });
+            }
+            setupDots() {
+                this.slides.forEach((s, i) => {
+                    const dot = document.createElement('div');
+                    dot.className = 'dot';
+                    dot.onclick = () => this.go(i);
+                    this.dots.appendChild(dot);
+                });
+                this.updateDots();
+            }
+            updateDots() {
+                this.dots.querySelectorAll('.dot').forEach((d, i) => {
+                    d.classList.toggle('active', i === this.current);
+                });
+            }
+            go(i) {
+                if (i >= 0 && i < this.slides.length) {
+                    this.slides[i].scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            hideHintOnScroll() {
+                const hint = document.querySelector('.keyboard-hint');
+                if (!hint) return;
+                let hidden = false;
+                window.addEventListener('scroll', () => {
+                    if (!hidden && window.scrollY > 50) {
+                        hint.style.opacity = '0';
+                        hidden = true;
+                    }
+                });
+            }
+        }
+        
+        class ScaleController {
+            constructor(refWidth = 1920, refHeight = 1080) {
+                this.refW = refWidth;
+                this.refH = refHeight;
+                this.isMobile = /iPhone|iPod|Android.*Mobile|BlackBerry|IEMobile|Opera Mini|webOS/i.test(navigator.userAgent);
+                if (this.isMobile) document.documentElement.classList.add('is-mobile');
+                this.slides = document.querySelectorAll('.slide');
+                this.inners = document.querySelectorAll('.slide-inner');
+                this.resize();
+                window.addEventListener('resize', () => this.resize());
+                window.addEventListener('orientationchange', () => this.resize());
+            }
+            resize() {
+                if (this.isMobile) {
+                    const s = window.innerWidth / this.refW;
+                    const scaledH = this.refH * s;
+                    this.inners.forEach(inner => { inner.style.transform = `scale(${s})`; });
+                    this.slides.forEach(slide => { slide.style.height = `${scaledH}px`; });
+                    return;
+                }
+                const s = Math.min(window.innerWidth / this.refW, window.innerHeight / this.refH);
+                this.inners.forEach(inner => { inner.style.transform = `scale(${s})`; });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('body.site-mode .slide-inner').forEach((inner, index) => {
+                if (inner.querySelector('.deco-stickers')) return;
+                const layer = document.createElement('div');
+                layer.className = 'deco-stickers';
+                const sectionText = (inner.querySelector('.label')?.textContent || '').toUpperCase();
+                let labels = ['♪', '音楽', 'NOTE', 'ARCHIVE'];
+                if (sectionText.includes('PORTFOLIO')) labels = ['♪', '音', 'FIELD', 'NOTE'];
+                else if (sectionText.includes('AGENDA')) labels = ['01', '練習', 'ARCHIVE', '♬'];
+                else if (sectionText.includes('INTRODUCTION')) labels = ['02', '研究', 'TEXT', '♪'];
+                else if (sectionText.includes('PART 01')) labels = ['03', '中国', 'WUHAN', '♩'];
+                else if (sectionText.includes('PART 02')) labels = ['04', '英国', 'MPhil', '♪'];
+                else if (sectionText.includes('PART 03')) labels = ['05', '日本', 'TOKYO', '♬'];
+                else if (sectionText.includes('TIMELINE')) labels = ['06', '軌跡', 'ROUTE', '♪'];
+                else if (sectionText.includes('PART 04')) labels = ['07', '未来', 'PLAN', '♬'];
+                else if (sectionText.includes('CONCLUSION') || sectionText.includes('CLOSING')) labels = ['08', 'まとめ', 'FINAL', '♪'];
+                layer.innerHTML = `
+                    <span class="sticker note s1">${labels[0]}</span>
+                    <span class="sticker round s2">${labels[1]}</span>
+                    <span class="sticker tag s3">${labels[2]}</span>
+                    <span class="sticker note s4">${labels[3]}</span>
+                `;
+                inner.prepend(layer);
+            });
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.add('visible'));
+            const revealObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        });
+    </script>
+
+
+</body></html>
